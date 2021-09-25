@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<!--Contributers: Albert Nisbet, Eeyore, albr0x, Jubs. Feel free to use, distribute and modify.-->
+<settings enableScaling="true" />
+<settings backgroundImage="" />
+<settings rotationPeriod="300" />
+<theaterMode>
+  <settings bdr="0,0,0" />
+</theaterMode>
+<screenSaver>
+  <settings idlePeriod="0" />
+  <settings monitor="1" otherMonitors="blackout" />
+</screenSaver>
+
+<!-- Background gallery -->
+<element type="BackgroundAlbumCover" refreshInterval="60"></element>
+
+<!-- Overlay -->
+<element name="Darker" type="Block" x="1" y="1" widthDock="Panel" width="-2" heightDock="Panel" height="-2" bg="120,20,20,20"></element>
+
+<!-- Spectrum visualisation at bottom of screen -->
+<element type="SpectrumVisualiser" name="Visualizer" x="200" y="-204" yAnchor="panel.center" align="middle.left" widthDock="X:Panel.Right" width="-200" height="150" min="150" fg="255,255,255,255" bdr="255,255,255,255"></element>
+
+<!-- Progress bar below track info -->
+<element name="#BarBg" type="Block" xAnchor="Panel.Left" yAnchor="panel.center" x="200" y="-100" widthDock="X:Panel.Right" width="-200" height="2" bg="20,255,255,255"></element>
+<element type="ProgressBar" name="#ProgressBar" xAnchor="Panel.Left" yAnchor="panel.center" x="200" y="-100" widthDock="X:Panel.Right" width="-200" height="2" fg="245,245,245" ></element>
+<element type="ProgressPosition" xAnchor="ProgressBar.Left" x="0" yAnchor="ProgressBar.Top" y="10" widthDock="X:#BarBg.Right" width="0" align="Right" font="Segoe UI" style="Regular" size="8" fg="240,240,240" ></element>
+
+<!-- Main section -->
+<element name="#Cover" type="AlbumCover" x="200" yAnchor="#BarBg.bottom" y="30" width="150" height="150" min="125" max="200" brightness="1.0" ></element>
+<element type="Field" id="Title" xAnchor="AlbumCover.Right" x="36" yAnchor="AlbumCover.Top" y="18" widthDock="X:Panel.Right" width="-200" font="Segoe UI" style="Bold" size="18" fg="255,255,255" ></element>
+<element type="Field" id="Artist" xAnchor="AlbumCover.Right" x="36" yAnchor="Title.Bottom" y="18" widthDock="X:Panel.Right" width="-200" font="Segoe UI" style="Regular" size="12" fg="255,255,255" ></element>
+<element name="#Album" type="Field" xAnchor="AlbumCover.Right" x="36" yAnchor="Artist.Bottom" y="18" widthDock="X:Panel.Right" width="-200" font="Segoe UI" style="Regular" size="12" fg="255,255,255" >
+  <child id="Album" />
+</element>
+
+<!-- Controls below track info -->
+<element type="PlayerBar" x="-1" xAnchor="#Cover.Left" yAnchor="#Cover.Bottom" y="0" align="center" widthDock="#Cover" width="2" height="23" bg="100,0,0,0" fg="245,245,245" fg2="200,200,200" ></element>
+
+<!-- Queue elements -->
+<element name="QueueBG" type="Block" widthDock="Panel" bg="50,0,0,0" yAnchor="Panel.Bottom" y="-120" height="120" min="100" max="120"></element>
+<element name="#Queue" type="Text" xAnchor="#Cover.Left" x="0" yAnchor="QueueBG.Top" y="20" widthDock="X:#BarBg.Right" width="0" font="Segoe UI" align="Left" style="Regular" size="9.75" fg="230,230,230" >Up Next</element>
+
+<element type="Field" id="Tracks[1]" xAnchor="#BarBg.Left" x="0" yAnchor="#Queue.Bottom" y="8" widthDock="X:#BarBg.Right" width="0" font="Segoe UI" style="Bold" size="9.75" fg="230,230,230" >
+  <child id="Title" ></child>
+  <child font="Segoe UI" style="Regular" size="9.75">   </child>
+  <child font="Segoe UI" style="Regular" size="9.75" id="Artist" />
+<child font="Segoe UI" style="Regular" size="9.75">   </child>
+  <child font="Segoe UI" style="Regular" size="8" fg="230,230,230" id="Duration" />
+</element>
+
+<element type="Field" id="Tracks[2]" xAnchor="#BarBg.Left" x="0" yAnchor="#Queue.Bottom" y="33" widthDock="X:#BarBg.Right" width="0" font="Segoe UI" style="Bold" size="9.75" fg="230,230,230" >
+  <child id="Title" ></child>
+  <child font="Segoe UI" style="Regular" size="9.75">   </child>
+  <child font="Segoe UI" style="Regular" size="9.75" id="Artist" />
+<child font="Segoe UI" style="Regular" size="9.75">   </child>
+  <child font="Segoe UI" style="Regular" size="8" fg="230,230,230" id="Duration" />
+</element>
+
+<element type="Field" id="Tracks[3]" xAnchor="#BarBg.Left" x="0" yAnchor="#Queue.Bottom" y="58" widthDock="X:#BarBg.Right" width="0" font="Segoe UI" style="Bold" size="9.75" fg="230,230,230" >
+  <child id="Title" ></child>
+  <child font="Segoe UI" style="Regular" size="9.75">   </child>
+  <child font="Segoe UI" style="Regular" size="9.75" id="Artist" />
+<child font="Segoe UI" style="Regular" size="9.75">   </child>
+  <child font="Segoe UI" style="Regular" size="8" fg="230,230,230" id="Duration" />
+</element>
+</root>
